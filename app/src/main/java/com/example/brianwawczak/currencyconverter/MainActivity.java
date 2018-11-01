@@ -36,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                DecimalFormat currency = new DecimalFormat("#.##");
+                DecimalFormat currency = new DecimalFormat("##,##0.00");
                 double dblUserInput = Double.parseDouble(currencyToConvert.getText().toString());
                 double convertRate = 1.14;
                 double convertedUserInput;
                 if(rbUStoEuro.isChecked()){
                     if(dblUserInput <= 10000){
-                        convertedUserInput = dblUserInput * convertRate;
+                        convertedUserInput = dblUserInput / convertRate;
                         displayResult.setText("€" + currency.format(convertedUserInput));
 
                     }
@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if(rbEuroToUS.isChecked()){
                     if(dblUserInput <= 10000){
-                        convertedUserInput = dblUserInput / convertRate;
-                        displayResult.setText(currency.format(convertedUserInput));
+                        convertedUserInput = dblUserInput * convertRate;
+                        displayResult.setText("$" + currency.format(convertedUserInput));
 
                     }
                     else{
