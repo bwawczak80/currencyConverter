@@ -37,7 +37,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DecimalFormat currency = new DecimalFormat("##,##0.00");
-                double dblUserInput = Double.parseDouble(currencyToConvert.getText().toString());
+                double dblUserInput;
+                try {
+                    dblUserInput = Double.parseDouble(currencyToConvert.getText().toString());
+                } catch (NumberFormatException e) {
+                    dblUserInput = 0;
+                }
                 double convertRate = 1.14;
                 double convertedUserInput;
                 if(rbUStoEuro.isChecked()){

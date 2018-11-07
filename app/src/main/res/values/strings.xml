@@ -5,4 +5,5 @@
     <string name="rbDollarToEuro">US Dollar to Euro</string>
     <string name="rbEuroToDollar">Euro to US Dollar</string>
     <string name="button1">Convert Currency</string>
+
 </resources>
