@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                     else{
-                        Toast.makeText(MainActivity.this, "The value entered must be less than $10,000.00", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "The value entered must be $10,000.00 or less", Toast.LENGTH_LONG).show();
                     }
                 }
                 if(rbEuroToUS.isChecked()){
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                     else{
-                        Toast.makeText(MainActivity.this, "The value entered must be less than €10,000.00", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "The value entered must be €10,000.00 or less", Toast.LENGTH_LONG).show();
                     }
                 }
 
